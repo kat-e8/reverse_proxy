@@ -1,0 +1,11 @@
+services:
+  apache:
+    build:
+      context: srv_build
+    ports:
+      - 8888:8080
+  proxy:
+    image: nginx:latest
+    ports:
+      - 80:80
+
